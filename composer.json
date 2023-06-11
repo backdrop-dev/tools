@@ -1,10 +1,8 @@
 {
-    "name": "benlumia007/backdrop-tools",
-    "description": "A core that helps you build amazing themes",
-    "keywords": [
-        "wordpress"
-    ],
-    "homepage": "https://github.com/benlumia007/backdrop-tools",
+    "name": "backdrop-dev/tools",
+    "description": "Backdrop Tools is a collection of helper classes and functions for developing themes and plugins.",
+    "keywords": [ "classicpress", "wordpress" ],
+    "homepage": "https://github.com/backdrop-dev/tools",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
