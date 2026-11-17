@@ -4,7 +4,7 @@ Backdrop Tools is a collection of helper classes and functions for developing pl
 ## Requirements
 * [ClassicPress](https://www.classicpress.net)
 * [WordPress](https://wordpress.org)
-* [PHP 7.1](https://www.php.net/releases/7_1_33.php)
+* [PHP 7.4](https://www.php.net/releases/7_4_0.php)
 * [Composer](https://getcomposer.org)
 
 ## Collection
