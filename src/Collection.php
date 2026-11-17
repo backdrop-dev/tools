@@ -4,8 +4,8 @@
  *
  * @package   Backdrop
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2019-2023. Benjamin Lu
- * @link      https://github.com/benlumia007/backdrop-tools
+ * @copyright 2019-2026. Benjamin Lu
+ * @link      https://github.com/backdrop-dev/tools
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -14,7 +14,7 @@ namespace Backdrop\Tools;
 use ArrayObject;
 
 /**
- * Registry class.
+ * Collection class.
  *
  * @since  1.0.0
  * @access public
@@ -62,7 +62,7 @@ class Collection extends ArrayObject {
 	}
 
 	/**
-	 * Returns an item.
+	 * Returns an item, or `null` if it doesn't exist.
 	 *
 	 * @since  1.0.0
 	 * @access public
@@ -71,7 +71,7 @@ class Collection extends ArrayObject {
 	 */
 	public function get( string $name ) {
 
-		return $this->offsetGet( $name );
+		return $this->offsetExists( $name ) ? $this->offsetGet( $name ) : null;
 	}
 
 	/**
@@ -137,6 +137,6 @@ class Collection extends ArrayObject {
 	 */
 	public function __get( string $name ) {
 
-		return $this->offSetGet( $name );
+		return $this->get( $name );
 	}
 }
