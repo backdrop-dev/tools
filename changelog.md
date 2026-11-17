@@ -1,5 +1,7 @@
 # Changelog
 
-## 1.0.0 - June 11, 2023
-Added
-* Everything new! This is the official release.
+## 1.0.0 - November 17, 2026
+The first official release of Backdrop Tools. It includes `Backdrop\Tools\Collection`, an `ArrayObject` with `add()`, `get()`, `has()`, `remove()` and `all()` methods, and property access to its items. It is used by `backdrop-dev/view`.
+
+Fixed:
+* `Collection::get()` and the magic `__get()` return `null` for a missing item instead of raising an "Undefined array key" warning.
