@@ -90,7 +90,7 @@ class Collection extends ArrayObject implements JsonSerializable {
 	/**
 	 * Returns a JSON-ready array of data.
 	 *
-	 * @since  1.1.0
+	 * @since  1.0.1
 	 * @access public
 	 * @return array
 	 */
