@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## 1.0.1 - November 23, 2026
 
 Added:
 * `Backdrop\Tools\Collection` implements `JsonSerializable`, with a `jsonSerialize()` method that returns a JSON-ready array of the collection's items, serializing any item that is itself `JsonSerializable`. Themes no longer need their own `Collection` subclass for this.
