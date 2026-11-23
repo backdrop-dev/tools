@@ -12,6 +12,7 @@
 namespace Backdrop\Tools;
 
 use ArrayObject;
+use JsonSerializable;
 
 /**
  * Collection class.
@@ -19,7 +20,7 @@ use ArrayObject;
  * @since  1.0.0
  * @access public
  */
-class Collection extends ArrayObject {
+class Collection extends ArrayObject implements JsonSerializable {
 
 	/**
 	 * Add an item.
@@ -84,6 +85,28 @@ class Collection extends ArrayObject {
 	public function all(): array {
 
 		return $this->getArrayCopy();
+	}
+
+	/**
+	 * Returns a JSON-ready array of data.
+	 *
+	 * @since  1.1.0
+	 * @access public
+	 * @return array
+	 */
+	#[\ReturnTypeWillChange]
+	public function jsonSerialize() {
+
+		return array_map( function( $value ) {
+
+			if ( $value instanceof JsonSerializable ) {
+
+				return $value->jsonSerialize();
+			}
+
+			return $value;
+
+		}, $this->all() );
 	}
 
 	/**
